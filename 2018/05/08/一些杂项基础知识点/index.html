@@ -48,10 +48,10 @@
 </blockquote>
 <h3 id="0x01-一些文件文件头格式"><a href="#0x01-一些文件文件头格式" class="headerlink" title="0x01 一些文件文件头格式."></a>0x01 一些文件文件头格式.</h3><ul>
 <li>JPG格式<br><figure class="figure"><img src="https://img-blog.csdn.net/20170420213438872?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3BlY3RlcjExMjM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="image"><figcaption class="figure__caption">image</figcaption></figure><br>根据上图可以知道.jpg更改图像的宽,高,颜色.</li>
-<li><p>PNG格式<br><figure class="figure"><img src="http://ik0ma.github.io/2018/04/28/2018-4-26-Github/image/ICFQ_RE0H7XX{ZH_R17T[DY.png" alt="image"><figcaption class="figure__caption">image</figcaption></figure>  </p>
+<li><p>PNG格式<br><figure class="figure"><img src="http://ik0ma.github.io/2018/05/07/2018-4-26-Github/image/ICFQ_RE0H7XX{ZH_R17T[DY.png" alt="image"><figcaption class="figure__caption">image</figcaption></figure>  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- （固定）八个字节89 50 4E 47 0D 0A 1A 0A为png的文件头</span><br><span class="line">- （固定）四个字节00 00 00 0D（即为十进制的13）代表数据块的长度为13</span><br><span class="line">- （固定）四个字节49 48 44 52（即为ASCII码的IHDR）是文件头数据块的标示（IDCH）</span><br><span class="line">- （可变）13位数据块（IHDR)</span><br><span class="line">    - 前四个字节代表该图片的宽</span><br><span class="line">    - 后四个字节代表该图片的高</span><br><span class="line">    - 后五个字节依次为：</span><br><span class="line">    Bit depth、ColorType、Compression method、Filter method、Interlace method</span><br><span class="line">- （可变）剩余四字节为该png的CRC检验码，由从IDCH到IHDR的十七位字节进行crc计算得到。</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>ZIP格式<br><figure class="figure"><img src="https://images2015.cnblogs.com/blog/1109779/201704/1109779-20170416214008587-85546943.jpg" alt="image"><figcaption class="figure__caption">image</figcaption></figure>  </p>
+<li><p>ZIP格式<br><figure class="figure"><img src="http://ik0ma.github.io/2018/05/07/2018-4-26-Github/image/1109779-20170416214008587-85546943.jpg" alt="image"><figcaption class="figure__caption">image</figcaption></figure>  </p>
 <h3 id="0X-50-4b-03-04"><a href="#0X-50-4b-03-04" class="headerlink" title="0X 50 4b 03 04"></a>0X 50 4b 03 04</h3></li>
 </ul>
 <p>分文件头信息标志，一般是zip文件的开头，可以通过这个判断文件格式.</p>
