@@ -35,6 +35,114 @@
 
 	<article>
 	
+		<h1><a href="/2018/05/08/一些杂项基础知识点/"></a></h1>
+	
+	<div class="article__infos">
+		<span class="article__date">2018-05-08</span><br />
+		
+		
+	</div>
+
+	
+
+	
+		<hr>
+<h2 id="misc基础-一"><a href="#misc基础-一" class="headerlink" title="misc基础(一)"></a>misc基础(一)</h2><blockquote>
+<p>个人感觉杂项就是要多接触一些知识点,积累的多了根据题目的提示可以直接了解做题的方法</p>
+</blockquote>
+<h3 id="0x01-一些文件文件头格式"><a href="#0x01-一些文件文件头格式" class="headerlink" title="0x01 一些文件文件头格式."></a>0x01 一些文件文件头格式.</h3><ul>
+<li>JPG格式<br><figure class="figure"><img src="https://img-blog.csdn.net/20170420213438872?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3BlY3RlcjExMjM1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="image"><figcaption class="figure__caption">image</figcaption></figure><br>根据上图可以知道.jpg更改图像的宽,高,颜色.</li>
+<li><p>PNG格式<br><figure class="figure"><img src="http://ik0ma.github.io/2018/04/28/2018-4-26-Github/image/ICFQ_RE0H7XX{ZH_R17T[DY.png" alt="image"><figcaption class="figure__caption">image</figcaption></figure>  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- （固定）八个字节89 50 4E 47 0D 0A 1A 0A为png的文件头</span><br><span class="line">- （固定）四个字节00 00 00 0D（即为十进制的13）代表数据块的长度为13</span><br><span class="line">- （固定）四个字节49 48 44 52（即为ASCII码的IHDR）是文件头数据块的标示（IDCH）</span><br><span class="line">- （可变）13位数据块（IHDR)</span><br><span class="line">    - 前四个字节代表该图片的宽</span><br><span class="line">    - 后四个字节代表该图片的高</span><br><span class="line">    - 后五个字节依次为：</span><br><span class="line">    Bit depth、ColorType、Compression method、Filter method、Interlace method</span><br><span class="line">- （可变）剩余四字节为该png的CRC检验码，由从IDCH到IHDR的十七位字节进行crc计算得到。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ZIP格式<br><figure class="figure"><img src="https://images2015.cnblogs.com/blog/1109779/201704/1109779-20170416214008587-85546943.jpg" alt="image"><figcaption class="figure__caption">image</figcaption></figure>  </p>
+<h3 id="0X-50-4b-03-04"><a href="#0X-50-4b-03-04" class="headerlink" title="0X 50 4b 03 04"></a>0X 50 4b 03 04</h3></li>
+</ul>
+<p>分文件头信息标志，一般是zip文件的开头，可以通过这个判断文件格式.</p>
+<h3 id="0x02-编码-算法-密码类"><a href="#0x02-编码-算法-密码类" class="headerlink" title="0x02 编码 算法 密码类"></a>0x02 编码 算法 密码类</h3><blockquote>
+<p>绝大部分题目都会涉及到这些问题,最好多多了解(做笔记)<br>下面我每种类型都写几个例子类型  </p>
+<ul>
+<li>Base 64 32 16   (特征：密文字符串的长度为4的整数倍。字符串的符号取值只能在A-Z, a-z, 0-9, +, /, =共计65个字符中，且=如果出现就必须在结尾出现。)</li>
+</ul>
+</blockquote>
+<ul>
+<li>MD5加密  (特征:MD5密文一般为16位或32位不规则中英文混合字符串)</li>
+<li>摩斯电码  (特征:只有 - 和 *)</li>
+<li>培根密码  (特征:只出现 a 和 b)</li>
+<li>栅栏密码  (特征:栅栏密码没有变换字符的内容，所以仍有元音保留，它的字符出现频率自然接近标准。)</li>
+<li>凯撒密码  (特征:多数情况会把元音变成非元音，非元音大多数依然变成非元音，因此在经过这种加密算法后，元音字母会很少。)</li>
+<li>unicode  (形如: \u0059\u006f\u0075\u0020\ )  </li>
+<li>ASCII编码  (<a href="http://www.asciima.com/" target="_blank" rel="noopener">ASCII详解</a>)<br>…<br>还有很多没有接触的crypty类型还需要去多多了解,等了解了再加上.  </li>
+</ul>
+
+	
+
+	
+
+</article>
+
+
+
+
+	<article>
+	
+		<h1><a href="/2018/05/07/kali/"></a></h1>
+	
+	<div class="article__infos">
+		<span class="article__date">2018-05-07</span><br />
+		
+		
+	</div>
+
+	
+
+	
+		<hr>
+<h2 id="简单的kali命令"><a href="#简单的kali命令" class="headerlink" title="简单的kali命令"></a>简单的kali命令</h2><h2 id="kali"><a href="#kali" class="headerlink" title="kali"></a>kali</h2><blockquote>
+<p>做ctf当然离不开我们的kali工具机啦,写下一点简单的命令.</p>
+</blockquote>
+<h3 id="0x01命令"><a href="#0x01命令" class="headerlink" title="0x01命令"></a>0x01命令</h3><ul>
+<li>-ls：列表</li>
+<li>cd：进入文件夹（ps.cd ~为直接回到根目录）</li>
+<li>cd：如果不记得文件夹名，tab自动补全</li>
+<li>cd -p：创建很多有顺序文件夹相互包含</li>
+</ul>
+<ul>
+<li>ls -a列出当前目录下的所有文件</li>
+<li>ls -l更详细的文件信息</li>
+</ul>
+<ul>
+<li>ls -al巨详细的文件信息</li>
+<li>touch：创建空文件</li>
+<li>echo：创建代有内容的文件(&gt;和&gt;&gt;是不同的)</li>
+</ul>
+<ul>
+<li>cat：查看</li>
+<li>cp：拷贝</li>
+</ul>
+<ul>
+<li>mv：移动或重命名(与cp命令差不多)</li>
+<li>more、less：分页显示文本内容</li>
+<li>pwd：查看当前路径</li>
+<li>rm：删除文件</li>
+<li>rm -r/-f：递归删除/强制删除(连自己都能删除hhhhhhhhh)</li>
+<li>find：搜索文件</li>
+<li>wc：统计文本中行数，字数，字符</li>
+<li>grep：在文本文件中查找某个字符串</li>
+<li>rmdir：删除空目录</li>
+</ul>
+
+	
+
+	
+
+</article>
+
+
+
+
+	<article>
+	
 		<h1><a href="/2018/05/07/2018-4-26-Github/"></a></h1>
 	
 	<div class="article__infos">
